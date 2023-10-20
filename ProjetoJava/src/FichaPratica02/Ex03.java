@@ -1,11 +1,9 @@
 package FichaPratica02;
 import java.util.Scanner;
-public class Ex02 {
 
 
-
+public class Ex03 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
 
         int salario;
@@ -14,9 +12,13 @@ public class Ex02 {
         salario = input.nextInt();
 
         if (salario <= 15000){
-            System.out.println("Salário igual ou inferior a 15000 paga taxa de 20%");
-        }else{
-            System.out.println("Salário maior que 15000 paga taxa de 30%");
+            System.out.print("Paga taxa de 20%");
         }
+        if (salario > 15000 && salario <= 20000){
+            System.out.println("Paga taxa de 30%");
+        }
+        if (salario >= 20000 && )
+
     }
+
 }
