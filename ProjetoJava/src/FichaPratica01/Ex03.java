@@ -19,4 +19,6 @@ public class Ex03 {
         perimeter = base * 2 + height * 2;
         System.out.println("A Área do retângulo é de: " + area + "m, e o Perímetro é de: " + perimeter + "m");
     }
+
+
 }

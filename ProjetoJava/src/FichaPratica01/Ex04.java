@@ -10,14 +10,14 @@ public class Ex04 {
 
     Scanner input = new Scanner(System.in);
 
-    double area,pi, radius;
+    double area, pi = 3.14, radius;
 
 
     System.out.print("Insira o raio da circuferência: ");
     radius = input.nextDouble();
     radius = radius * radius;
 
-    pi = 3.14;
+
     area = pi * radius;
 
     System.out.println("A área total da circuferência é de: " + area + "cm2");
