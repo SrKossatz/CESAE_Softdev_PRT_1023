@@ -17,7 +17,12 @@ public class Ex03 {
         if (salario > 15000 && salario <= 20000){
             System.out.println("Paga taxa de 30%");
         }
-        if (salario >= 20000 && )
+        if (salario > 20000 && salario <= 25000 ){
+            System.out.println("Paga taxa de 35%");
+        }
+        if  (salario > 25000){
+            System.out.println("Parabéns, você é rico, pague taxa de 40%");
+        }
 
     }
 
