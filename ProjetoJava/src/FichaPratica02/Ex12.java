@@ -27,7 +27,7 @@ public class Ex12 {
         System.out.println("Opção 3 selecionada.");
         break;
       case 4:
-        System.out.println("");
+
         break;
       default:
         System.out.println("Opção inválida");
