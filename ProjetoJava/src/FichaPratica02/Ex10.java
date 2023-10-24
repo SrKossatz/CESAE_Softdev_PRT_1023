@@ -41,6 +41,9 @@ public class Ex10 {
         System.out.println("O valor da divisão é: " +division);
         break;
 
+      default:
+        System.out.println("O Valor inserido não é válido");
+
     }
 
 

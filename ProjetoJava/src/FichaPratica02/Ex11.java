@@ -7,5 +7,6 @@ public class Ex11 {
     Scanner input = new Scanner(System.in);
 
 
+
   }
 }
