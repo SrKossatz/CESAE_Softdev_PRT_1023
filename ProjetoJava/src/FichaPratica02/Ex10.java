@@ -3,50 +3,36 @@ import java.util.Scanner;
 
 public class Ex10 {
   public static void main(String[] args) {
+
     Scanner input = new Scanner(System.in);
 
-    double number1, number2, sum, multiplication, division, subtraction;
-    char operator;
+    double number1, number2;
+    String operation;
 
-    System.out.println("Vamos realizar uma operação matemática básica!");
-    System.out.print("Insira o primeiro número real: ");
-    number1= input.nextDouble();
+    System.out.print("Insira o primeiro número: ");
+    number1=input.nextDouble();
 
-    System.out.print("Insira o segundo número real: ");
-    number2= input.nextDouble();
+    System.out.print("Insira o segundo número: ");
+    number2=input.nextDouble();
 
-    System.out.print("Insira o código do operador que deseja saber o resultado ( +, -, *, / )");
-    operator = input.next().charAt(0);
+    System.out.print("Agora escolha qual operação deseja realizar (+, -, /, *): ");
+    operation=input.next();
 
-    sum=number1+number2;
-    multiplication=number1*number2;
-    division=number1/number2;
-    subtraction=number1-number2;
-
-
-    switch (operator){
-      case '+':
-        System.out.println("O valor da soma é: " + sum);
+    switch (operation){
+      case "+":
+        System.out.println(number1+number2);
         break;
-
-      case '-':
-        System.out.println("O valor da subtração é: " + subtraction);
+      case "-":
+        System.out.println(number1-number2);
         break;
-
-      case '*':
-        System.out.println("O valor da multiplicação é: " +multiplication);
+      case "/":
+        System.out.println(number1/number2);
         break;
-
-      case '/':
-        System.out.println("O valor da divisão é: " +division);
+      case "*":
+        System.out.println(number1*number2);
         break;
-
       default:
-        System.out.println("O Valor inserido não é válido");
-
+        System.out.println("Operador não válido. Insira (+, -, /, *");
     }
-
-
-
   }
 }
