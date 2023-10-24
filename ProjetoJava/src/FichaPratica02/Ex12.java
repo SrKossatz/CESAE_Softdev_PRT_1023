@@ -13,7 +13,7 @@ public class Ex12 {
     System.out.println("Opção 2: Atualizar.");
     System.out.println("Opção 3: Eliminar.");
     System.out.println("Opção 4: Sair.");
-    
+
     selectedOption= input.nextInt();
 
     switch (selectedOption){

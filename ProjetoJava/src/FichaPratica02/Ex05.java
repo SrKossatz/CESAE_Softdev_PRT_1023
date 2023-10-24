@@ -14,9 +14,9 @@ public class Ex05 {
     value2= input.nextInt();
 
     if (value1 > value2){
-      System.out.print(value2);
+      System.out.print(value2+ " " +value1);
     }else{
-      System.out.println(value1);
+      System.out.println(value1+ " " +value2);
     }
 
   }
