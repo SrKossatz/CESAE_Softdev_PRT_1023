@@ -19,8 +19,8 @@ public class Ex10 {
     operator = input.next().charAt(0);
 
     sum=number1+number2;
-    multiplication
-    division
+    multiplication=number1*number2;
+    division=number1/number2;
     subtraction=number1-number2;
 
 
@@ -34,11 +34,11 @@ public class Ex10 {
         break;
 
       case '*':
-        System.out.println("O valor da multiplicação é: " +(number1*number2));
+        System.out.println("O valor da multiplicação é: " +multiplication);
         break;
 
       case '/':
-        System.out.println("O valor da divisão é: " +(number1/number2));
+        System.out.println("O valor da divisão é: " +division);
         break;
 
     }
