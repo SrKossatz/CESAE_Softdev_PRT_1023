@@ -15,17 +15,14 @@ public class Ex07 {
         num=input.nextInt();
 
         decrescimo=num-5;
-
+        acrescimo=num+5;
 
         while (decrescimo<num){
             System.out.println(decrescimo);
             decrescimo++;
         }
 
-        System.out.println("");
-
-
-        acrescimo=num+5;
+        System.out.println();
 
         num++;
 

@@ -7,23 +7,35 @@ import java.util.Scanner;
 
 public class Ex08 {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        int num=0, media=0, ciclo=-1;
+        // Declarar variáveis
+        double num=0, somatorio=0,contador=0, media;
 
+        while(num!=-1){
+            // Ler num até ter -1
+            System.out.print("Insira um número (-1 para parar): ");
+            num=input.nextDouble();
 
-        while (num!=-1){
-            media=media+num;
-            System.out.print("Introduza um número: ");
-            num= input.nextInt();
-            ciclo=ciclo+1;
+            // Acumular o número na variável somatório
+            somatorio=somatorio+num;
 
-            System.out.println(media);
-
+            // Contar +1 aos números introduzidos
+            contador++;
         }
-        System.out.println(media/ciclo);
 
+        // Remover o -1 do somatório
+        somatorio++;
+        System.out.println("Somatório: "+somatorio);
 
+        // Remover uma contagem
+        contador--;
+        System.out.println("Contador: "+contador);
 
+        // Calcular a média
+        media=somatorio/contador;
+
+        System.out.println("Média: "+media);
     }
 }
