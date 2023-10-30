@@ -2,6 +2,10 @@ package FichaPratica03;
 
 import java.util.Scanner;
 
+//Faça um programa que imprima os números inteiros de 1 a 100 inclusive, e no final imprima também o valor do
+//seu somatório. (Não necessita de Scanner ou input do utilizador)
+//Exemplo de Execução
+
 public class Ex06 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -14,8 +18,6 @@ public class Ex06 {
             startNumber++;
         }
         System.out.println(soma);
-
-
-
     }
 }
+
