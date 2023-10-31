@@ -1,19 +1,26 @@
-//package FichaPratica03;
-//
-////Escreva um programa que calcule e imprima o fatorial de um número inteiro não-negativo n. Utilize o ciclo
-//
-//import java.util.Scanner;
-//
-//public class Ex14 {
-//    public static void main(String[] args) {
-//        Scanner input = new Scanner(System.in);
-//
-//        int numero, fatorial;
-//
-//        System.out.print("Insira um número para calcular o fatorial: ");
-//        numero= input.nextInt();
-//
-//        while ()
-//
-//    }
-//}
+package FichaPratica03;
+
+import java.util.Scanner;
+
+public class Ex14 {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    // Declarar variáveis
+    int num, fatorial=1;
+
+    // Ler num
+    System.out.print("Insira um número: ");
+    num = input.nextInt();
+
+    fatorial=num;
+    num--;
+
+    while(num>0){
+      fatorial=fatorial*(num);
+      num--;
+    }
+
+    System.out.println("Fatorial: "+fatorial);
+  }
+}

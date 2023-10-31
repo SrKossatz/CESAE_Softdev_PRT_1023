@@ -1,0 +1,16 @@
+header img {
+  width: 70vw;
+  max-width: 600px;
+  min-width: 400px;
+  
+}
+
+header, footer{
+  text-align: center;
+  width: fit-content;
+  
+}
+
+
+
+

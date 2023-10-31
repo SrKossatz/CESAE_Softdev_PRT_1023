@@ -3,7 +3,7 @@ package FichaPratica03;
 import java.util.Scanner;
 
 //Faça um algoritmo que leia dois números inteiros, representando os valores início e fim de um intervalo e
-//        imprima os múltiplos de 5 entre eles.
+//imprima os múltiplos de 5 entre eles.
 
 public class Ex12 {
     public static void main(String[] args) {
