@@ -9,6 +9,7 @@ public class Ex13 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+<<<<<<< Updated upstream
         // Declarar variáveis
         int numAnt, numAtual, quantidadeNumeros, contador = 1;
         boolean crescente = true;
@@ -45,5 +46,8 @@ public class Ex13 {
 
 
         
+=======
+
+>>>>>>> Stashed changes
     }
 }
