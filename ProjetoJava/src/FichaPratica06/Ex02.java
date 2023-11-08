@@ -16,10 +16,16 @@ public class Ex02 {
         return num;
     }
 
+
+    /**
+     Método que imprime asteriscos
+     * @param numero parâmetro inserido pelo utilizador
+     */
     public static void imprimirAsteriscos(int numero){
 
-        System.out.println("imprima astericos *");
-
+       for (int indice=0;indice<numero;indice++){
+           System.out.print("*");
+       }
 
     }
 
