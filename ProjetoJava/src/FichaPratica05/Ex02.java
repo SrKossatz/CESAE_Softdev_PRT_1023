@@ -3,25 +3,23 @@ package FichaPratica05;
 import java.util.Scanner;
 
 public class Ex02 {
-    public static void main(String[] args) {
+      public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        int [] vetor = new int[12];
-        int somaTotal=0;
+        double[] vetor = new double[12];
+        double somaTotal=0;
 
-
-
-        for (int indice=0; indice<12; indice++){
-            System.out.print("Insira o valor da comissão ["+indice+"]: ");
-            vetor[indice]= input.nextInt();
-            somaTotal=somaTotal+vetor[indice];
-            System.out.println("somaTotal" + somaTotal);
-
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print("Insira um valor de comissão [" + i + "]: ");
+            vetor[i] = input.nextDouble();
         }
 
+        for (int i = 0; i < vetor.length; i++) {
+            somaTotal+=vetor[i];
+        }
+        
         System.out.println(somaTotal);
-
-
-
     }
 }
+
