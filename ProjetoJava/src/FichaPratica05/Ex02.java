@@ -15,6 +15,7 @@ public class Ex02 {
             System.out.print("Insira o valor da comissão ["+indice+"]: ");
             vetor[indice]= input.nextInt();
             somaTotal=somaTotal+vetor[indice];
+            System.out.println("somaTotal" + somaTotal);
 
         }
 

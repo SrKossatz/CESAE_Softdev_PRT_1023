@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,46 +12,32 @@
     <!-- exemplo do link entre páginas, ponto de chegada do id da página about -->
     <!-- <p id="topo"></p> -->
 
-    <!-- cabeçalho site -->
-
     <header>
       <img src="Imagens/logo.png" alt="logotipo Cesae" />
-      <br />
-      <!-- <nav>
-            <a href="https://www.cesae.pt" target="_blank">Ir página Cesae</a>
-            <a href="index.html">Home</a>
-            <a href="Paginas/softdev.html">SoftwareDev</a>
-            <a href="Paginas/about.html">Sobre Nós</a>
-            <a href="Paginas/form.html">Contacto</a>
-        </nav> -->
-      <nav class="topnav">
-        <a href="https://www.cesae.pt" target="_blank">Ir página Cesae</a>
-        <a class="active" href="index.html">Home</a>
-        <a href="Paginas/softdev.html">SoftwareDev</a>
-        <a href="Paginas/about.html">Sobre Nós</a>
-        <a href="Paginas/form.html">Contacto</a>
+      <nav>
+        <a href="https://www.cesae.pt" target="_blank">HomePageCESAE</a>
+        <ul class="nav-list">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="/paginas/softdev.html">SoftwareDEV</a></li>
+          <li><a href="/paginas/about.html">About</a></li>
+          <li><a href="/paginas/contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <p>
-      Lorem ipsum
-      <a href="https://www.cesae.pt" target="_blank">dolor sit amet</a>
-      consectetur, adipisicing elit. Labore ex voluptas vel molestiae illo
-      similique voluptatibus incidunt error repellendus cupiditate, quia omnis
-      sequi provident sit? Iste facilis maiores harum nisi?
-    </p>
+    <div class="containerHome">
+      <p class="initialText">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores repudiandae velit error eveniet assumenda magni neque nobis corrupti quidem labore iusto, ea cumque minima? Nisi temporibus neque accusantium repellat quos.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis illum ipsa necessitatibus. Provident accusamus fugiat, suscipit aliquid id dignissimos eveniet dicta sint, ullam magnam necessitatibus, ex 
+      </p>
 
-    <div>
-      <img
-        src="Imagens/man-wooden-cubes-table-management-concept.jpg"
-        alt=""
-        style="width: 20%"
-      />
+      <div>
+        <img class="firstImgHome"
+          src="Imagens/man-wooden-cubes-table-management-concept.jpg"
+          alt=""    
+        />
+      </div>
     </div>
-
-    <br />
-    <hr />
-    <br />
 
     <div class="areaiframes">
       <iframe

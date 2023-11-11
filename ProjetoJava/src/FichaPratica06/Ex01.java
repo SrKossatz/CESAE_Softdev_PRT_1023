@@ -1,13 +1,13 @@
 package FichaPratica06;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class Ex01 {
 
     /**
      * Método faz o barulho do animal
-     * @param animal
+     * @param animal String
      */
     public static void fazerBarulho(String animal){
 
