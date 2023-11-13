@@ -1,5 +1,6 @@
 package FichaPratica05;
-
+// Implemente um programa que permita adicionar comissões mensais a um array de tamanho 12 (1 posição para 
+// cada mês) e calcular o seu total anual.
 import java.util.Scanner;
 
 public class Ex02 {

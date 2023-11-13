@@ -1,5 +1,5 @@
 package FichaPratica05;
-
+//  Escreva um programa que lê um array de tamanho 10 e calcula a média dos elementos.
 import java.util.Scanner;
 
 public class Ex05 {

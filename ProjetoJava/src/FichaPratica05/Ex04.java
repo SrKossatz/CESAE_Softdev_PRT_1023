@@ -1,5 +1,5 @@
 package FichaPratica05;
-
+//  Escreva um programa que lê um array de tamanho 10 e encontra o menor elemento.
 import java.util.Scanner;
 
 public class Ex04 {

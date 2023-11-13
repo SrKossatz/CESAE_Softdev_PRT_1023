@@ -1,5 +1,8 @@
 package FichaPratica05;
 
+// Implemente um programa que permita adicionar 10 números inteiros a um array e que os imprima pela ordem 
+// de inserção. Exemplo de execução
+
 import java.util.Scanner;
 
 public class Ex01 {

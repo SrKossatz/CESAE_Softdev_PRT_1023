@@ -1,5 +1,5 @@
 package FichaPratica05;
-
+// Escreva um programa que lê um array de tamanho 10 e encontra o maior elemento
 import java.util.Scanner;
 
 public class Ex03 {
@@ -24,9 +24,9 @@ public class Ex03 {
       if (vetor[i] > maiorElemento) {
         maiorElemento = vetor[i];
 
-        System.out.println("Maior elemento: "+maiorElemento);
       }
-
+      System.out.println("Maior elemento: "+maiorElemento);
+      
     }
 
   }
