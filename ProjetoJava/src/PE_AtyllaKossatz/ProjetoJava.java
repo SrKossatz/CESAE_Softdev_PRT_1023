@@ -262,7 +262,7 @@ public class ProjetoJava {
                             break;
                         case 3:
                             lerFicheiroParaMatriz("FicheiroProjeto/GameStart_V2.csv");
-                            pesquisarTitulos(matrizTotal[][]);
+
 
 
                             break;
