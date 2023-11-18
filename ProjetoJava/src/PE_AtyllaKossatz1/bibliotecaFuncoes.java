@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class bibliotecaFuncoes {
 
 
+
   public static void menuCliente(){
     Scanner input = new Scanner(System.in);
     int opcao;
@@ -14,11 +15,11 @@ public class bibliotecaFuncoes {
 
     do {
       System.out.println("\n\n***Menu do Cliente***");
-      System.out.println("Opção (1): Faça o seu cadastro:");
-      System.out.println("Opção (2): Verifique disponibilidade de vaga no estacionamento:");
-      System.out.println("Opção (3): Pesquise todos os jogos:");
-      System.out.println("Opção (4): Pesquise os jogos por editora:");
-      System.out.println("Opção (0): Sair:");
+      System.out.println("Opção (1): Faça o seu cadastro.");
+      System.out.println("Opção (2): Verifique disponibilidade de vaga no estacionamento.");
+      System.out.println("Opção (3): Pesquise todos os jogos.");
+      System.out.println("Opção (4): Pesquise os jogos por editora.");
+      System.out.println("Opção (0): Sair.");
       
       System.out.print("Selecione a opção desejada:");
       opcao=input.nextInt();
@@ -36,8 +37,9 @@ public class bibliotecaFuncoes {
           break;
 
         case 2:
-          System.out.println("***Vagas disponíveis:***");
+          System.out.println("\n\n***Vagas disponíveis:***");
           vagaEstacionamento(121);
+          break;
 
       
         default:
@@ -47,6 +49,67 @@ public class bibliotecaFuncoes {
       
     } while (opcao!=0);
   }
+
+  public static void menuAdministrador() throws FileNotFoundException {
+
+    Scanner input = new Scanner(System.in);
+
+    int opcao;
+
+    do{
+      System.out.println("\n**** Menu Administrador****");
+
+      System.out.println("Opção (1): Ficheiro geral de dados GameStart.");
+      System.out.println("Opção (2): Valor total de vendas.");
+      System.out.println("Opção (3): Total do lucro baseado nos (20%) de direito sobre as vendas.");
+      System.out.println("Opção (4): Pesquisar cliente.");
+      System.out.println("Opção (6): Imprima qual o jogo mais caro e os clientes que o compraram.");
+      System.out.println("Opção (0): Sair!");
+      System.out.print("Escolha a opção desejada: ");
+      opcao = input.nextInt();
+
+
+
+      switch (opcao){
+        case 1:
+
+          imprimirConteudoFicheiro("src/PE_AtyllaKossatz1/GameStart_V2.csv");
+
+          break;
+
+        case 2:
+
+          break;
+
+        case 3:
+
+          break;
+
+        case 4:
+
+          break;
+
+        case 5:
+
+          break;
+
+        case 6:
+
+          break;
+
+        case 0:
+          break;
+
+        default:
+          System.out.println("Opção Inválida!");
+          break;
+      }
+    }while (opcao!=0);
+
+  }
+
+
+
 
   /**
    * Método criado para contar linhas do ficheiro
@@ -93,7 +156,7 @@ public class bibliotecaFuncoes {
 
   /**
    * Método criado para atribuir o ficheiro a matriz.
-   * @param caminhoFicheiro
+   * @param caminhoFicheiro Caminho do ficheiro
    * @return Matriz preenchida com linhas e colunas.
    * @throws FileNotFoundException Excessão ao erro.
    */
@@ -135,6 +198,11 @@ public class bibliotecaFuncoes {
 
   }
 
+  /**
+   * Método usado para imprimir o conteúdo do ficheiro.
+   * @param caminhoFicheiro Caminho onde está armazenado o ficheiro.
+   * @throws FileNotFoundException Excessão ao erro.
+   */
   public static void imprimirConteudoFicheiro(String caminhoFicheiro) throws FileNotFoundException {
 
     Scanner ficheiro = new Scanner(new File(caminhoFicheiro));
@@ -146,6 +214,10 @@ public class bibliotecaFuncoes {
     }
   }
 
+  /**
+   * Método criado para verificar as vagas disponíveis no estacionamento. Número triangulares multiplos de 5.
+   * @param num Quantidade total a ser verificada definida na raiz. num=121.
+   */
   public static void vagaEstacionamento(int num){
 
     int somatorio=0, contador=1;
@@ -161,6 +233,28 @@ public class bibliotecaFuncoes {
         System.out.println(somatorio);
 
       }
+    }
+  }
+
+  /**
+   * Método criado para verificar senha do administrador.
+   * @throws FileNotFoundException Excessão ao erro.
+   */
+  public static void senhaAdministrador() throws FileNotFoundException {
+
+    Scanner input = new Scanner (System.in);
+
+    int senhaRegistrada=123456789, senha;
+
+    System.out.print("Digite sua senha:");
+    senha = input.nextInt();
+
+    if(senhaRegistrada==senha){
+
+      System.out.println("Senha Correta. Acesso liberado!");
+      menuAdministrador();
+    }else {
+      System.out.println("Senha incorreta!");
     }
   }
 
