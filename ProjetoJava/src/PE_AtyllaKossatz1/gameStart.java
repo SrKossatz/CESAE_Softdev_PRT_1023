@@ -3,6 +3,7 @@ package PE_AtyllaKossatz1;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
 import static PE_AtyllaKossatz1.bibliotecaFuncoes.*;
 
 public class gameStart {
