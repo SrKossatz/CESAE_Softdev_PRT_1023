@@ -30,7 +30,11 @@ public class gameStart {
           break;
         case 2:
           senhaAdministrador();
-          menuAdministrador();
+
+          break;
+
+        case 0:
+          System.out.println("Goodbye");
           break;
 
         default:

@@ -3,12 +3,12 @@ package PE_AtyllaKossatz1;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.text.DecimalFormat;
+
 
 public class bibliotecaFuncoes {
 
 
-  public static void menuCliente() {
+  public static void menuCliente() throws FileNotFoundException {
     Scanner input = new Scanner(System.in);
     int opcao;
 
@@ -41,6 +41,18 @@ public class bibliotecaFuncoes {
           vagaEstacionamento(121);
           break;
 
+        case 3:
+          buscarJogos(matriz("src/PE_AtyllaKossatz1/gameStart.java"));
+
+        case 4:
+          System.out.println("Questão não resolvida!");
+          break;
+
+
+        case 0:
+          System.out.println("Goodbye");
+          break;
+
 
         default:
           System.out.println("Opcão inválida");
@@ -62,8 +74,8 @@ public class bibliotecaFuncoes {
       System.out.println("Opção (1): Ficheiro geral de dados GameStart.");
       System.out.println("Opção (2): Valor total de vendas.");
       System.out.println("Opção (3): Total do lucro baseado nos (20%) de direito sobre as vendas.");
-      System.out.println("Opção (4): Pesquisar cliente.");
-      System.out.println("Opção (6): Imprima qual o jogo mais caro e os clientes que o compraram.");
+      System.out.println("Opção (4): Pesquisar cliente pelo ID.");
+      System.out.println("Opção (5): Imprima qual o jogo mais caro e os clientes que o compraram.");
       System.out.println("Opção (0): Sair!");
       System.out.print("Escolha a opção desejada: ");
       opcao = input.nextInt();
@@ -71,9 +83,7 @@ public class bibliotecaFuncoes {
 
       switch (opcao) {
         case 1:
-
           imprimirConteudoFicheiro("src/PE_AtyllaKossatz1/GameStart_V2.csv");
-
           break;
 
         case 2:
@@ -85,18 +95,16 @@ public class bibliotecaFuncoes {
           break;
 
         case 4:
-
+          buscarCliente(matriz("src/PE_AtyllaKossatz1/GameStart_V2.csv"));
           break;
 
         case 5:
-
-          break;
-
-        case 6:
-
+//        Somente o jogo mais caro, não imprime os clientes que o compraram.
+          jogoMaisCaro(matriz("src/PE_AtyllaKossatz1/GameStart_V2.csv"));
           break;
 
         case 0:
+          System.out.println("Goodbye");
           break;
 
         default:
@@ -224,7 +232,6 @@ public class bibliotecaFuncoes {
 
     int somatorio = 0, contador = 1;
 
-    num = 121;
 
     while (somatorio < num) {
       somatorio += contador;
@@ -264,12 +271,12 @@ public class bibliotecaFuncoes {
 
   /**
    * Método que calcula o total de vendas.
-   * @param matrizTotal Recebe a matriz preenchida com o fihceiro.
+   *
+   * @param matriz Recebe a matriz preenchida com o fihceiro.
    * @throws FileNotFoundException Excessão ao erro.
    */
   public static void valorTotaldeVendas(String[][] matriz) throws FileNotFoundException {
 
-    matriz = matriz("src/TrabalhoPratico_PE/GameStart_V2.csv");
 
     double valor, totalVendas = 0;
 
@@ -282,21 +289,104 @@ public class bibliotecaFuncoes {
   }
 
   /**
-   * Método usado para calcular o lucro total (20% das vendas)
-   * @param matriz
+   * Método usado para devolver o lucro gerado pelas vendas. O resultado devolve 20% do valor total.
+   *
+   * @param matriz Caminho usado para localizar a matriz
    */
-  public static void lucro(String [][] matriz){
+  public static void lucro(String[][] matriz) {
     double lucro = 0;
 
     for (int i = 0; i < matriz.length; i++) {
 
       lucro += Double.parseDouble(matriz[i][8]) * 0.2;
     }
-    System.out.println("Lucro:"+"€"+lucro);
+    System.out.println("Lucro:" + "€" + lucro);
 
   }
 
+  /**
+   * Método que busca o cliente pelo ID.
+   *
+   * @param matriz Caminho do ficheiro inserido dentro da matriz.
+   * @throws FileNotFoundException Excessão ao erro.
+   */
+  public static void buscarCliente(String[][] matriz) throws FileNotFoundException {
 
+
+    Scanner input = new Scanner(System.in);
+
+
+    System.out.print("Digite o ID do cliente: ");
+    double id = input.nextDouble();
+
+    for (int linha = 0; linha < matriz.length; linha++) {
+      if (id == Double.parseDouble(matriz[linha][1])) {
+
+
+        System.out.println("Nome: " + matriz[linha][2] + "Contato:" + matriz[linha][3] + "Email: " + matriz[linha][4]);
+        break;
+      }
+    }
+
+  }
+
+  /**
+   * Método usado para buscar os jogos e eliminar os jogos já vistos.
+   *
+   * @param matriz Matriz que recebe o ficheiro.
+   * @throws FileNotFoundException Excessão ao erro.
+   */
+  public static void buscarJogos(String[][] matriz) throws FileNotFoundException {
+
+    String jogoJaVisto = "";
+
+    for (int linha = 0; linha < matriz.length; linha++) {
+
+      String jogoAtual = matriz[linha][7];
+
+      //Únuca forma que consegui resolver essa questão. Segue link da pesquisa: https://www.w3schools.com/java/ref_string_contains.asp
+      //Método contains().
+      if (jogoJaVisto.contains(jogoAtual) == false) {
+        System.out.println(jogoAtual);
+
+        jogoJaVisto += jogoAtual;
+
+      }
+
+    }
+
+  }
+
+  /**
+   * Método que imprime o jogo mais caro e o nome do cliente que o comprou.
+   * @param matriz Matriz que recebe o ficheiro.
+   * @throws FileNotFoundException Excessão ao erro.
+   */
+  public static void jogoMaisCaro(String[][] matriz) throws FileNotFoundException {
+
+
+    double jogoAtual = 0, jogoMaisCaro = 0;
+
+
+    for (int linha = 0; linha < matriz.length; linha++) {
+      jogoAtual = Double.parseDouble(matriz[linha][8]);
+
+      if (jogoAtual > jogoMaisCaro) {
+        jogoMaisCaro = jogoAtual;
+
+      }
+
+    }
+    for (int linha = 0; linha < matriz.length; linha++) {
+      jogoAtual = Double.parseDouble(matriz[linha][8]);
+      if (jogoAtual==jogoMaisCaro){
+        System.out.println("Jogo mais caro: "+matriz[linha][7]);
+        System.out.println("Cliente: "+matriz[linha][2]);
+      }
+
+    }
+
+  }
 
 }
 
