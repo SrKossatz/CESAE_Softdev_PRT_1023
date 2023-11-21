@@ -4,23 +4,22 @@ public class Aluno {
     private String nome;
     private int idade;
     private String curso;
-    private double media=9.5;
+    private double media;
 
-    public Aluno(String nome, int idade, String curso) {
+    public Aluno(String nome, int idade, String curso, double media) {
         this.nome = nome;
         this.idade = idade;
         this.curso = curso;
+        this.media = media;
     }
 
-    public double situacao(double nota1, double nota2){
 
-        double aprovado = (nota1 +nota2)/2;
-
-        if( aprovado >= this.media){
-            System.out.println("Aluno Aprovado com nota: "+aprovado);
+    public void situcao(){
+        if (this.media>=9.5){
+            System.out.println("Aprovado");
         }else{
             System.out.println("Reprovado");
         }
-        return aprovado;
     }
 }
+
