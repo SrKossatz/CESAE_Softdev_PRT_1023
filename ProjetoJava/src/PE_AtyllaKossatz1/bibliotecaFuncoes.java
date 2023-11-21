@@ -99,7 +99,7 @@ public class bibliotecaFuncoes {
           break;
 
         case 5:
-//        Somente o jogo mais caro, não imprime os clientes que o compraram.
+//
           jogoMaisCaro(matriz("src/PE_AtyllaKossatz1/GameStart_V2.csv"));
           break;
 

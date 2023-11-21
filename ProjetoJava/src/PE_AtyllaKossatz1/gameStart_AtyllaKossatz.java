@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static PE_AtyllaKossatz1.bibliotecaFuncoes.*;
 
-public class gameStart {
+public class gameStart_AtyllaKossatz {
 
   public static void main(String[] args) throws FileNotFoundException {
 
