@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-main: var(#1a4a5a);
+}
+
+header {
+  background-color: #0e2c40;
+  height: 60px;
+  max-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed; /* fixa a barra de navegação */
+  top: 0; /* Define a barra de navegação no topo da página */
+  width: 100%; /* Define a largura para ocupar toda a largura da página */
+  z-index: 1000;
+}
+
+.logo {
+  width: 50px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #f0f8ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  text-decoration: none;
+  list-style: none;
+}
+.img-main {
+  width: 50%;
+}
+
+.text-main {
+  font-size: 1.5em;
+  max-height: 400px;
+  max-height: fit-content;
+  color: #f0f8ff;
+  text-align: justify;
+}
+
+.container-main {
+  height: 100vh;
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a4a5a;
+}
+
+.section-portifolio {
+  padding-top: 60px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1a4a5a99;
+  gap: 15px;
+  
+}
+
+.card {
+  margin:auto;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: #555;
+}
+
+
+/* Pontos de quebra para o card */
+
+/* @media (max-width: 1400px) {
+  .card {
+    width: 400px;
+    height: 486px;
+  }
+}
+@media (max-width: 1300px) {
+  .card {
+    width: 400px;
+    height: 463px;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 400px;
+    height: 430px;
+  }
+} */
+
+
+/* @media (max-width: 1000px) {
+  .card {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
+  }
+} 
+
+form{
+  height: 100vh;
+} */
