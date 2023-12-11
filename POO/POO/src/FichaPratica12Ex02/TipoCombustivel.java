@@ -1,5 +1,5 @@
 package FichaPratica12Ex02;
 
-public enum TipoDeCombustivel {
+public enum TipoCombustivel {
   GASOLINA, DIESEL, GPL, ELETRICO
 }

@@ -1,25 +1,37 @@
 package FichaPratica12Ex02;
 
-public class Camiao extends Veiculo{
-  private double capacidadeDeCarga;
+public class Camiao extends Veiculo {
 
-  public Camiao(String marca, String modelo, int anoFabrico, int potencia, double cilindrada, double consumo, double capacidadeDeCarga) {
-    super(marca, modelo, anoFabrico, potencia, cilindrada, TipoDeCombustivel.DIESEL, consumo);
-    this.capacidadeDeCarga = capacidadeDeCarga;
+  private double capacidadeCarga;
+
+  public Camiao(String marca, String modelo, int anoFabrico, int potencia, int cilindrada,  double consumo, double capacidadeCarga) {
+    super(marca, modelo, anoFabrico, potencia, cilindrada, TipoCombustivel.DIESEL, consumo);
+    this.capacidadeCarga = capacidadeCarga;
   }
 
-  //(DIESEL = 1.95€/L)
-  public void viagem(double distacia, double carga){
-    //consumo da viagem (litro/100km)
-    double litroAcada100km = this.getConsumo();
-    double litroAcada100kmComCarga=litroAcada100km+carga*0.1;
+  public boolean viagem(double distancia, double carga) { // 50, 1500
+    double diesel = 1.95;
 
-    //custo da viagem (quanto foi gasto em combustível)
+    if (carga > this.capacidadeCarga) { // Muito pesado
+      System.out.println("Carga: "+carga+"Kg. muito pesada. Capacidade Máxima: "+this.capacidadeCarga+"Kg.");
+      return false;
+    } else { // Tem capacidade para a viagem
+      double litrosConsumidos = calcularConsumo(distancia);
+      double litrosExtra = carga / 1000;
+      litrosConsumidos += litrosExtra;
 
+      double valorViagem = litrosConsumidos * diesel;
 
+      System.out.println("Consumo: "+litrosConsumidos+"L");
+      System.out.println("Valor: "+valorViagem+"€");
+
+      return true;
+    }
   }
 
-
-
-
+  @Override
+  public void exibirDetalhes() {
+    super.exibirDetalhes();
+    System.out.println("Capacidade Carga: "+this.capacidadeCarga+" Kg.");
+  }
 }

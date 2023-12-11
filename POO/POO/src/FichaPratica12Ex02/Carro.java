@@ -1,31 +1,45 @@
 package FichaPratica12Ex02;
 
 public class Carro extends Veiculo{
-  public int quantidadeDePassageiros;
 
-  public Carro(String marca, String modelo, int anoFabrico, int potencia, double cilindrada, TipoDeCombustivel tipoDeCombustivel, double consumo, int quantidadeDePassageiros) {
-    super(marca, modelo, anoFabrico, potencia, cilindrada, tipoDeCombustivel, consumo);
-    this.quantidadeDePassageiros = quantidadeDePassageiros;
+  private int quantidadePassageiros;
+
+  public Carro(String marca, String modelo, int anoFabrico, int potencia, int cilindrada, TipoCombustivel tipoCombustivel, double consumo, int quantidadePassageiros) {
+    super(marca, modelo, anoFabrico, potencia, cilindrada, tipoCombustivel, consumo);
+    this.quantidadePassageiros = quantidadePassageiros;
   }
 
-  //(GASOLINA = 2.10€/L, DIESEL = 1.95€/L, GPL = 1.15€/L, ELETRICO = 0.12€/L)
-  public void calcularCusto(double distacia){
+  public double calcularCustoViagem(int distancia){
+    double gasolina=2.1, diesel=1.95, gpl=1.15, eletrico=0.12;
 
-    //Litros consumidos em uma viagem de X Km de distância. X=distância.
-    double consumoTotal=consumo(distacia);
+    double valorViagem=0;
+    double litrosConsumidos = this.calcularConsumo(distancia);
 
-    if (this.getTipoDeCombustivel().equals(TipoDeCombustivel.GASOLINA)){
-      System.out.println("Preço total : "+(consumoTotal*2.10));
-    }
-    if (this.getTipoDeCombustivel().equals(TipoDeCombustivel.DIESEL)){
-      System.out.println("Preço total: "+(consumoTotal*1.95));
-    }
-    if (this.getTipoDeCombustivel().equals(TipoDeCombustivel.GPL)){
-      System.out.println("Preço total: "+(consumoTotal*1.15));
+    switch (this.getTipoCombustivel()){
+      case GASOLINA:
+        valorViagem=litrosConsumidos*gasolina;
+        break;
 
-    }if (this.getTipoDeCombustivel().equals(TipoDeCombustivel.ELETRICO)){
-      System.out.println("Preço total: "+(consumoTotal*0.12));
+      case DIESEL:
+        valorViagem=litrosConsumidos*diesel;
+        break;
+
+      case GPL:
+        valorViagem=litrosConsumidos*gpl;
+        break;
+
+      case ELETRICO:
+        valorViagem=litrosConsumidos*eletrico;
+        break;
     }
+
+    return valorViagem;
   }
 
+
+  @Override
+  public void exibirDetalhes() {
+    super.exibirDetalhes();
+    System.out.println("Nº Passageiros: "+this.quantidadePassageiros);
+  }
 }

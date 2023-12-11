@@ -1,4 +1,4 @@
-package Singleton.Ex01;
+package DesignPatterns.Singleton.Ex01;
 
 public class main {
   public static void main(String[] args) {

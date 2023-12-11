@@ -1,4 +1,4 @@
-package Singleton.Ex02;
+package DesignPatterns.Singleton.Ex02;
 
 import java.io.File;
 import java.io.FileWriter;
