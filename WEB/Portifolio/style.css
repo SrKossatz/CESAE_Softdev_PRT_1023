@@ -8,11 +8,17 @@ html {
 }
 
 :root {
-  --color-main: var(#1a4a5a);
+  --color-main:#1a4a5a;
+  --blueColor2:#7492C2;
+  --blueColor3:#395A8F;
+  --blueColor4:#122F5C;
+  --blueColor5:#00102A;
+  --blueColor1:#C4D7F5;
+
 }
 
 header {
-  background-color: #0e2c40;
+  background-color: var(--blueColor5);
   height: 60px;
   max-height: 80px;
   display: flex;
