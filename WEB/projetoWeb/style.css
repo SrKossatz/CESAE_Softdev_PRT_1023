@@ -1,37 +1,42 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Titillium+Web:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Titillium+Web:wght@400;700&display=swap");
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --blueColor1: #C4D7F5;
-  --blueColor2: #7492C2;
-  --blueColor3: #395A8F;
-  --blueColor4: #122F5C;
+:root {
+  --textColor: #fff;
+  --blueColor1: #c4d7f5;
+  --blueColor2: #7492c2;
+  --blueColor3: #395a8f;
+  --blueColor4: #122f5c;
   --blueColor5: #001029;
-  --textFont: 'Roboto Slab', serif;
-  --titleFont: 'Titillium Web', sans-serif;
+  --textFont: "Roboto Slab", serif;
+  --titleFont: "Titillium Web", sans-serif;
 }
 
-img{
-  width: 100px;
+.logo {
+  width: 70px;
   border-radius: 999px;
 }
 
-header{
-  
-  
+header {
   padding: 20px;
   
-  max-height: 150px;
+  max-height: 130px;
   background-color: var(--blueColor5);
- 
+  box-shadow: 0 4px 8px rgba(0, 0, 20, 1.1);
   
+  
+}
+
+.image-section{
+
+  width: 500px;
+  border-radius: 10px;
 }
 
 nav {
@@ -42,32 +47,67 @@ nav {
   text-transform: uppercase;
 }
 
-
-a{
-  color: #e4e2e2;
-  font-size: 1.5em;
+a {
+  color: var(--textColor);
+  text-shadow: 2px 2px 4px rgba(179, 177, 177, 0.8);
+  font-size: 1.3em;
   letter-spacing: 3px;
   gap: 5px;
   font-family: var(--titleFont);
   text-decoration: none;
-
 }
-a:hover{
+a:hover {
   background-color: var(--blueColor4);
   border-radius: 8px;
 }
-main{
+main {
   width: 80%;
-  background-color:var(--blueColor4);
+  background-color: var(--blueColor4);
   margin: auto;
   height: 100vh;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+ 
+}
+main h1 {
+ 
+  border: 1px solid red;
+  color: var(--textColor);
+}
+main p {
+  border: 1px solid red;
+  color: var(--textColor);
 }
 
-body{
+body {
   background-image: url(image/header.jpg);
 }
 
 
 
+/* .titulo-principal{
+  max-width: 480px;
+  text-align: center;
+  margin: 60px auto;
+  font-family:'Courier New', Courier, monospace;
+  color: #fff;
+} */
+.titulo-principal:after{
+content: '|';
+margin-left: 5px;
+opacity: 1;
+animation: pisca .7s infinite;
+}
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
 
-
+@keyframes pisca{
+  0%, 100%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
+  }
+}
