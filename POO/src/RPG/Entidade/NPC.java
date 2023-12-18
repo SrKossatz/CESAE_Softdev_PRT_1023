@@ -1,8 +1,6 @@
 package RPG.Entidade;
 
-import RPG.Entidade;
-
-public abstract class NPC extends Entidade {
+public class NPC extends Entidade {
     private int ouro;
 
     public NPC(String nome, int vidaMax, int vidaAtual, int forca, int ouro) {
@@ -10,5 +8,12 @@ public abstract class NPC extends Entidade {
         this.ouro = ouro;
     }
 
-
+    @Override
+    public void mostrarDetalhes() {
+        System.out.println("Detalhes do NPC: ");
+        System.out.println("Nome: "+ this.getNome());
+        System.out.println("Vida atual: "+this.getVidaAtual());
+        System.out.println("Força: "+this.getForca());
+        System.out.println("Ouro: "+this.ouro);
+    }
 }

@@ -1,7 +1,4 @@
-package RPG;
-
-// Vida MAX = 100
-// Vida Mínima = 0
+package RPG.Entidade;
 
 public abstract class Entidade {
     private String  nome;
@@ -16,7 +13,21 @@ public abstract class Entidade {
         this.forca = forca;
     }
 
-    public abstract void atacar(NPC npc);
+    public String getNome() {
+        return nome;
+    }
+
+    public int getVidaMax() {
+        return vidaMax;
+    }
+
+    public int getVidaAtual() {
+        return vidaAtual;
+    }
+
+    public int getForca() {
+        return forca;
+    }
 
     public abstract void mostrarDetalhes();
 }
