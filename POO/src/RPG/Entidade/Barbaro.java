@@ -1,24 +1,10 @@
 package RPG.Entidade;
 
-
-import RPG.Itens.ArmaPrincipal;
-
 public class Barbaro extends Heroi{
-  private int resistencia;
-  private int ataqueFuria;
 
-  public Barbaro(String nome, int vidaMax, int vidaAtual, int forca, int ouro, int nivel, ArmaPrincipal armaPrincipal, int resistencia, int ataqueFuria) {
-    super(nome, vidaMax, vidaAtual, forca, ouro, nivel, armaPrincipal);
-    this.resistencia = resistencia;
-    this.ataqueFuria = ataqueFuria;
-  }
 
-  public int getResistencia() {
-    return resistencia;
-  }
-
-  public int getAtaqueFuria() {
-    return ataqueFuria;
+  public Barbaro(String nome, int vidaMax, int vidaAtual, int forca, int ouro) {
+    super(nome, vidaMax, vidaAtual, forca, ouro);
   }
 
   @Override
@@ -28,6 +14,10 @@ public class Barbaro extends Heroi{
 
   @Override
   public void mostrarDetalhes() {
+    System.out.println("Nome: "+this.getNome());
+    System.out.println("Vida Atual: "+this.getVidaAtual());
+    System.out.println("Força: "+this.getForca());
+    System.out.println("Ouro: "+this.getOuro());
 
   }
 }

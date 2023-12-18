@@ -23,11 +23,16 @@ public class Lerficheiro {
 
     while (file.hasNextLine()){
       linha= file.nextLine();
+      linha.replace("[","");
+      linha.replace("]","");
+
       String[] linhaAtual = linha.split(";");
       String armaPrincipal =linhaAtual[0];
       String nomeDaArma =linhaAtual[1];
       int preco = Integer.parseInt(linhaAtual[2]);
+
       String [] splitHeroi =linhaAtual[3].split(",");
+
       int ataque = Integer.parseInt(linhaAtual[4]);
       int ataqueEspecial = Integer.parseInt(linhaAtual[5]);
       int ataqueInstantaneo = Integer.parseInt(linhaAtual[6]);

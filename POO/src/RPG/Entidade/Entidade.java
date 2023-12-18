@@ -29,5 +29,10 @@ public abstract class Entidade {
         return forca;
     }
 
-    public abstract void mostrarDetalhes();
+    public void mostrarDetalhes(){
+        System.out.println("Nome: "+this.nome);
+        System.out.println("Nome: "+this.vidaMax);
+        System.out.println("Nome: "+this.vidaAtual);
+        System.out.println("Nome: "+this.forca);
+    }
 }
