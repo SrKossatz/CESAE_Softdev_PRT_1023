@@ -8,6 +8,11 @@ public class NPC extends Entidade {
         this.ouro = ouro;
     }
 
+    public NPC criarNpc(){
+        NPC npc = new NPC("Porteiro da floresta", 50,30,20,500);
+        return npc;
+    }
+
     @Override
     public void mostrarDetalhes() {
         System.out.println("Detalhes do NPC: ");
@@ -16,4 +21,6 @@ public class NPC extends Entidade {
         System.out.println("Força: "+this.getForca());
         System.out.println("Ouro: "+this.ouro);
     }
+
+
 }

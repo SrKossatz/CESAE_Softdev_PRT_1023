@@ -7,10 +7,10 @@ public class Barbaro extends Heroi{
     super(nome, vidaMax, vidaAtual, forca, ouro);
   }
 
-  @Override
-  public void atacar(NPC npc) {
-    super.atacar(npc);
-  }
+//  @Override
+////  public void atacar(NPC npc) {
+////    super.atacar(npc);
+////  }
 
   @Override
   public void mostrarDetalhes() {

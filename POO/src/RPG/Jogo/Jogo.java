@@ -21,7 +21,10 @@ public class Jogo {
     public Heroi criarPersonagem() {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Bem Vindo ao RPG Sombra do Destino");
+        System.out.println("\t---Bem Vindo ao RPG SombraS do DestinO---");
+        System.out.println("Em Sombras do destino, o reino de Eldoria vive em uma paz frágil, ameaçada pela profecia do retorno de Noxar, uma entidade malígna que renasce das cinzas a cada milênio." +
+                " \nO jogador deve escolher entre tres guerreiros sagrados: Um destemível Bárbaro, um poderoso feiticeiro, ou um habilidoso arqueiro. Vamos começar a nossa aventura.");
+        System.out.println("");
         System.out.println("Primeiro defina um nome para o seu Heroi: ");
         String nomeHeroi = input.nextLine();
 
@@ -85,8 +88,13 @@ public class Jogo {
     public Heroi sombraDoDestino(){
         Heroi jogador= criarPersonagem();
 
+
+
+
         return jogador;
     }
+
+
 
 
 

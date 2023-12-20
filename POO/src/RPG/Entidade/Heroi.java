@@ -39,7 +39,7 @@ public abstract class Heroi extends Entidade {
         return inventario;
     }
 
-    public void atacar(NPC npc) {
+    public static void atacar(NPC npc) {
         System.out.println("");
     }
 

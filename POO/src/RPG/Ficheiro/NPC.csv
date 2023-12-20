@@ -1,0 +1,16 @@
+tipo;nome;vidaatual;poder;ataque;nivel;ouro;sala
+NpcDaFloresta;Elathor;30;20;20;5;300;1
+NpcDoPicoGelado;Yrium;50;30;30;7;500;2
+NpcDosRios;Artroxx;50;35;40;10;800;3
+NpcDosCeus;Aedis;60;40;60;15;1000;4
+NpcDasMinasTerrestres;Toflin;60;40;60;15;1000;5
+NpcDoVulcao;Bruenn;80;50;15;1000;6
+NpcSemiFinal;Minotauro;80;50;15;1500;7
+NpcSemiFinal;Toguro;80;50;15;1500;8
+NpcFinal;MestreMiyagi;100;100;100;0;9
+
+
+
+
+
+

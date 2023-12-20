@@ -1,6 +1,7 @@
 package RPG.Entidade;
 
 import RPG.Itens.ItemHeroi;
+import RPG.Repositorio.ItemHeroiRepositorio;
 
 
 import java.util.ArrayList;
@@ -9,7 +10,8 @@ public class Vendedor {
     private ArrayList<ItemHeroi> loja;
 
     public Vendedor() {
-        this.loja = new ArrayList<>();
+        ItemHeroiRepositorio repositorio = new ItemHeroiRepositorio();
+        this.loja = repositorio.getItemArray();
     }
 
     public void imprimirLoja(){
