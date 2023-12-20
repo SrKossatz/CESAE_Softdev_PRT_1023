@@ -7,8 +7,7 @@ public class Main {
   public static void main(String[] args) {
     Jogo jogo = new Jogo();
     Heroi heroi = jogo.sombraDoDestino();
+    System.out.println("\n");
     heroi.mostrarDetalhes();
-
-
   }
 }
