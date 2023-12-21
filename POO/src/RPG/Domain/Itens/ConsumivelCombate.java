@@ -1,18 +1,19 @@
-package RPG.Itens;
+package RPG.Domain.Itens;
 
 
 
 public class ConsumivelCombate extends Consumivel {
 
-    private int AtaqueInstantaneo;
+    private int ataqueInstantaneo;
 
     public ConsumivelCombate(String nome, int precoMoedasOuro, int ataqueInstantaneo) {
         super(nome, precoMoedasOuro);
-        AtaqueInstantaneo = ataqueInstantaneo;
+        this.ataqueInstantaneo = ataqueInstantaneo;
     }
 
     @Override
     public void mostrarDetalhes() {
-
+        super.mostrarDetalhes();
+        System.out.println("Ataque Instantâneo: "+this.ataqueInstantaneo);
     }
 }

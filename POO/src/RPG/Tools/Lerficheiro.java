@@ -1,10 +1,12 @@
 package RPG.Tools;
 
-import RPG.Itens.ArmaPrincipal;
-import RPG.Itens.ConsumivelCombate;
-import RPG.Itens.ItemHeroi;
-import RPG.Itens.Pocao;
+import RPG.Domain.Itens.ArmaPrincipal;
+import RPG.Domain.Itens.ConsumivelCombate;
+import RPG.Domain.Itens.ItemHeroi;
+import RPG.Domain.Itens.Pocao;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,16 +20,17 @@ public class Lerficheiro {
 
 
 
-  public ArrayList <ItemHeroi> itensDoFicheiro(){
-    Scanner file = new Scanner(this.caminho);
+  public ArrayList <ItemHeroi> itensDoFicheiro() throws FileNotFoundException {
+    File file = new File(this.caminho);
+    Scanner scanner = new Scanner(file);
 
-   String linha=file.nextLine();
+   String linha=scanner.nextLine();
    ArrayList<ItemHeroi> arrayItens = new ArrayList<>();
 
-    while (file.hasNextLine()){
-      linha= file.nextLine();
-      linha.replace("[","");
-      linha.replace("]","");
+    while (scanner.hasNextLine()){
+      linha= scanner.nextLine();
+      linha=linha.replace("[","");
+      linha=linha.replace("]","");
 
       String[] linhaAtual = linha.split(";");
       String tipo =linhaAtual[0];
@@ -59,8 +62,12 @@ public class Lerficheiro {
 
         case "Pocao":
 
-          itemHeroiAtual = new Pocao(nome,preco,ataqueInstantaneo,vida,forca);
+          itemHeroiAtual = new Pocao(nome,preco,vida,forca);
 
+      }
+
+      for (int i = 0; i < splitHeroi.length; i++) {
+        itemHeroiAtual.adicionarHeroisPermitidos(splitHeroi[i]);
       }
 
       arrayItens.add(itemHeroiAtual);

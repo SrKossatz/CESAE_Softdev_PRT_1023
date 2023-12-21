@@ -1,9 +1,9 @@
-package RPG.Jogo;
+package RPG.View.Jogo;
 
-import RPG.Entidade.Arqueiro;
-import RPG.Entidade.Barbaro;
-import RPG.Entidade.Feiticeiro;
-import RPG.Entidade.Heroi;
+import RPG.Domain.Entidade.Arqueiro;
+import RPG.Domain.Entidade.Barbaro;
+import RPG.Domain.Entidade.Feiticeiro;
+import RPG.Domain.Entidade.Heroi;
 
 import java.util.Scanner;
 

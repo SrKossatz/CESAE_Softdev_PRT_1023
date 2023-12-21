@@ -6,3 +6,6 @@ ConsumivelCombate;GranadaDeMao;10;[Barbaro,Arqueiro];0;0;30;0;0
 ConsumivelCombate;Abrakadabra;25;[Feiticeiro];0;0;200;0;0
 Pocao;VinhoDoPorto;5;[Barbaro,Arqueiro,Feiticeiro];0;0;0;8;15
 Pocao;InjecaoAdrenalina;18;[Barbaro,Arqueiro];0;0;0;-15;15
+Pocao;InjecaoAdrenalina;18;[Barbaro,Arqueiro];0;0;0;-15;15
+Pocao;InjecaoAdrenalina;18;[Barbaro,Arqueiro];0;0;0;-15;15
+Pocao;Adaga;18;[Barbaro,Arqueiro];0;0;0;-15;15

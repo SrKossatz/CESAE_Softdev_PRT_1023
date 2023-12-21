@@ -1,4 +1,4 @@
-package RPG.Entidade;
+package RPG.Domain.Entidade;
 
 public class Feiticeiro extends Heroi{
 

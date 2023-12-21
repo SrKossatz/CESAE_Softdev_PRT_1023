@@ -1,13 +1,12 @@
-package RPG.Entidade;
+package RPG.Domain.Entidade;
 
-import RPG.Itens.ArmaPrincipal;
-import RPG.Itens.Consumivel;
+import RPG.Domain.Itens.ArmaPrincipal;
+import RPG.Domain.Itens.Consumivel;
 
 
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.SubmissionPublisher;
 
 public abstract class Heroi extends Entidade {
     private int ouro;

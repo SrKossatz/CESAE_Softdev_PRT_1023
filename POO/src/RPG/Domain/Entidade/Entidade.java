@@ -1,4 +1,4 @@
-package RPG.Entidade;
+package RPG.Domain.Entidade;
 
 public abstract class Entidade {
     private String  nome;

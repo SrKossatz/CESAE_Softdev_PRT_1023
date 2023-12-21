@@ -1,4 +1,4 @@
-package RPG.Itens;
+package RPG.Domain.Itens;
 
 
 
@@ -13,8 +13,11 @@ public class ArmaPrincipal extends ItemHeroi {
     this.ataqueEspecial = ataqueEspecial;
   }
 
+
   @Override
   public void mostrarDetalhes() {
-
+    super.mostrarDetalhes();
+    System.out.println("Ataque: "+this.ataque);
+    System.out.println("Ataque: "+this.ataqueEspecial);
   }
 }

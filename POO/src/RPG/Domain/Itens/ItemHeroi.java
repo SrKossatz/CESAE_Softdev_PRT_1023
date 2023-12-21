@@ -1,8 +1,5 @@
-package RPG.Itens;
+package RPG.Domain.Itens;
 
-import RPG.Enums.TipoDeHeroi;
-
-import java.security.PrivilegedAction;
 import java.util.ArrayList;
 
 public abstract class ItemHeroi {
@@ -17,5 +14,16 @@ public abstract class ItemHeroi {
         this.heroisPermitidos=new ArrayList<>();
     }
 
-    public abstract void mostrarDetalhes();
+    public void mostrarDetalhes(){
+
+        System.out.println("\nNome: "+this.nome);
+        System.out.println("precoMoedas: "+this.precoMoedasOuro);
+        System.out.println("heroisPermitidos: "+this.heroisPermitidos);
+    }
+
+    public void adicionarHeroisPermitidos(String heroi){
+        heroisPermitidos.add(heroi);
+    }
+
+
 }
