@@ -2,16 +2,27 @@ package RPG.Domain.Entidade;
 
 public class NPC extends Entidade {
     private int ouro;
+    private int sala;
 
-    public NPC(String nome, int vidaMax, int vidaAtual, int forca, int ouro) {
+    public NPC(String nome, double vidaMax, double vidaAtual, double forca, int ouro, int sala) {
         super(nome, vidaMax, vidaAtual, forca);
+        this.ouro = ouro;
+        this.sala = sala;
+    }
+
+    public int getSala() {
+        return sala;
+    }
+
+    public int getOuro() {
+        return ouro;
+    }
+
+    public void setOuro(int ouro) {
         this.ouro = ouro;
     }
 
-    public NPC criarNpc(){
-        NPC npc = new NPC("Porteiro da floresta", 50,30,20,500);
-        return npc;
-    }
+
 
     @Override
     public void mostrarDetalhes() {
@@ -20,6 +31,8 @@ public class NPC extends Entidade {
         System.out.println("Vida atual: "+this.getVidaAtual());
         System.out.println("Força: "+this.getForca());
         System.out.println("Ouro: "+this.ouro);
+        System.out.println("Sala: "+this.sala);
+
     }
 
 

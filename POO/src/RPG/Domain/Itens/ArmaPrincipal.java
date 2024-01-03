@@ -13,6 +13,13 @@ public class ArmaPrincipal extends ItemHeroi {
     this.ataqueEspecial = ataqueEspecial;
   }
 
+  public int getAtaque() {
+    return ataque;
+  }
+
+  public int getAtaqueEspecial() {
+    return ataqueEspecial;
+  }
 
   @Override
   public void mostrarDetalhes() {

@@ -7,16 +7,21 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 //Repositório contém as linhas do Array em forma de Objeto. Cada linha é um objeto diferente.
+//Classe que gerência itens do Heroi.
 
 public class ItemHeroiRepositorio {
-    ArrayList<ItemHeroi> itemArray;
+  private ArrayList<ItemHeroi> itemArray;
 
-    public ItemHeroiRepositorio() throws FileNotFoundException {
-        Lerficheiro lerficheiro = new Lerficheiro();
-        this.itemArray=lerficheiro.itensDoFicheiro();
-    }
+  /**
+   * Método itensDoFicheiro chamado para preencher o itemArray com itens.
+   * @throws FileNotFoundException
+   */
+  public ItemHeroiRepositorio() throws FileNotFoundException {
+    Lerficheiro lerficheiro = new Lerficheiro();
+    this.itemArray = lerficheiro.itensDoFicheiro();
+  }
 
-    public ArrayList<ItemHeroi> getItemArray() {
-        return itemArray;
-    }
+  public ArrayList<ItemHeroi> getItemArray() {
+    return itemArray;
+  }
 }

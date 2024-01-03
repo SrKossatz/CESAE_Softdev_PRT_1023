@@ -1,0 +1,8 @@
+RPG
+RPG.Controller
+RPG.Controller.EstrategiaAtaque
+RPG.Domain.Entidade
+RPG.Domain.Itens
+RPG.Repositorio
+RPG.Tools
+RPG.View.Jogo

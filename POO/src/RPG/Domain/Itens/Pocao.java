@@ -12,6 +12,14 @@ public class Pocao extends Consumivel {
         this.aumentoDeForca = aumentoDeForca;
     }
 
+    public int getVidaACurar() {
+        return vidaACurar;
+    }
+
+    public int getAumentoDeForca() {
+        return aumentoDeForca;
+    }
+
     @Override
     public void mostrarDetalhes() {
         super.mostrarDetalhes();

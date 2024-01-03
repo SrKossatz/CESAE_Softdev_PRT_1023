@@ -19,7 +19,11 @@ public class Lerficheiro {
   }
 
 
-
+  /**
+   * Método que cria uma lista de objetos ItemHeroi. Carrega Itens de diferentes tipos e caracteristicas.
+   * @return Lista de itens do Heroi.
+   * @throws FileNotFoundException
+   */
   public ArrayList <ItemHeroi> itensDoFicheiro() throws FileNotFoundException {
     File file = new File(this.caminho);
     Scanner scanner = new Scanner(file);
