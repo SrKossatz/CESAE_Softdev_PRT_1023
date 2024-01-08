@@ -1,8 +1,14 @@
 tipo;nome;preco;heroisPermitidos;ataque;ataqueEspecial;ataqueInstantaneo;vida;forca
-ArmaPrincipal;Excalibur;75;[Barbaro,Feiticeiro];20;35;0;0;0
-ArmaPrincipal;Faca Manteiga;5;[Barbaro];2;3;0;0;0
-ArmaPrincipal;Arco Velho;4;[Arqueiro];3;5;0;0;0
-ConsumivelCombate;Granada de Mao;10;[Barbaro,Arqueiro];0;0;30;0;0
-ConsumivelCombate;Avada Kedavra;25;[Feiticeiro];0;0;200;0;0
-Pocao;Vinho do Porto;5;[Barbaro,Arqueiro,Feiticeiro];0;0;0;8;15
-Pocao;Injecao Adrenalina;18;[Barbaro,Arqueiro];0;0;0;-15;15
+ArmaPrincipal;Excalibur;75;[Barbaro,Feiticeiro];30;35;0;0;15
+ArmaPrincipal;FacaManteiga;5;[Barbaro];2;3;0;0;10
+ArmaPrincipal;ArcoVelho;4;[Arqueiro];50;5;0;0;5
+ArmaPrincipal;EspadaJusticeira;90;[Barbaro,Feiticeiro,Arqueiro];50;50;50;0;50
+ArmaPrincipal;VarinhaDoAzevinho;80;[Feiticeiro];20;70;10;0;30
+ArmaPrincipal;ManoplaDoDestino;100;[Barbaro,Feiticeiro,Arqueiro];60;50;65;0;50
+ConsumivelCombate;GranadaDeMao;10;[Barbaro,Arqueiro];0;0;15;0;20
+ConsumivelCombate;Abrakadabra;25;[Feiticeiro];0;0;20;0;10
+ConsumivelCombate;GuaranaDoAmazonas;100;[Barbaro,Arqueiro,Feiticeiro];0;0;40;0;20
+Pocao;InjecaoAdrenalina;18;[Barbaro,Arqueiro];0;0;0;-15;20
+Pocao;OlhoDeVidro;30;[Feiticeiro,Arqueiro,Barbaro];0;0;0;-10;30
+Pocao;SangueDeOgro;25;[Barbaro,Arqueiro];0;0;0;20;15
+Pocao;MioloDeSapoVermelho;10;[Barbaro,Feiticeiro];0;0;0;30;10
